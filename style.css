@@ -46,22 +46,114 @@ src: url('./src/assets/fonts/NataSans-Medium.ttf');
   {
     font-size: 30px;
   }
-  .taskText
-  {
-    width: 580px;
-    height: 45px;
-    border: 4px solid #333; 
-    border-radius: 12px; 
-    font-size: 25px;
-    padding-right: 40px; /* Место для кнопки */
-    background-image: url('src/assets/images/enterButton.png');
-    background-repeat: no-repeat;
-    background-position: right 10px center;
-    background-size: 55px 40px;
-  }
 
-  .taskText::placeholder
+  
+  .task__text::placeholder
   {
    
     font-size: 25px;
-  }
+  }  
+
+
+.textarea-wrapper {
+  width: 680px; 
+  position: relative;
+}
+
+.input-wrapper { 
+  position: relative; 
+  width: 680px; }
+
+.task__text {
+  width: 100%;
+  height: 55px;
+  border: 4px solid #333;
+  border-radius: 12px;
+  font-size: 25px;
+  padding-right: 45px;
+}
+
+.enter__btn {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.enter__btn img {
+  width: 45px;
+  height: 35px;
+}
+
+.task__list {
+  width: 100%; 
+  margin: 10px 0 0;
+  padding: 0;
+}
+
+.task__item {
+  display: flex;
+
+  font-size: 25px;
+  list-style: none;
+  word-wrap: break-word;
+ 
+  align-items: center; 
+ gap: 8px;
+}
+
+.line {
+  width: 100%; 
+  border: none;
+  border-top: 2px solid #333;
+  margin: 5px 0;
+}
+
+
+
+.custom-checkbox input {
+  display: none; 
+}
+
+.custom-checkbox span {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #333;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.custom-checkbox input:checked + span {
+  background-color: #333;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="white" height="20" viewBox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M7.629 14.571l-4.9-4.9 1.414-1.414L7.63 11.743l8.228-8.228 1.414 1.414z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.delete-button
+{
+ 
+  border-style: none;
+  
+  background-image: url(src/assets/images/deletebutton.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain; 
+  width: 25px;
+  height: 26px;
+  background-size: contain; 
+  width: 20px;
+  height: 21px;
+}
+
+.task-text {
+  flex: 1; 
+}
+
+.task-text.completed {
+  color: gray;
+  text-decoration: line-through black;
+}
